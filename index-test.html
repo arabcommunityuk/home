@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Arab Community of the UK | Events, Socials and Networking</title>
+
+    <!-- SEO and Social Media Meta Tags -->
+    <link rel="canonical" href="https://arabcommunity.org/">
+    <meta name="description" content="Discover a vibrant Arab Community in the heart of the UK! Join us for engaging events, socials, and networking opportunities that celebrate our rich cultural tapestry.">
+    <meta property="og:title" content="The Arab Community of the UK | Events, Socials and Networking">
+    <meta property="og:description" content="Discover a vibrant Arab Community in the heart of the UK! Join us for engaging events, socials, and networking opportunities that celebrate our rich cultural tapestry.">
+    <meta property="og:url" content="https://arabcommunity.org/">
+    <meta property="og:site_name" content="The Arab Professionals Community of the UK">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:email" content="hello@arabcommunity.org">
+    <meta name="rating" content="General">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/imgFiles/favicon/favicon.ico">
+
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+        <div class="hero-overlay">
+            <div class="container">
+                <!-- Navigation Bar -->
+                <nav class="navbar">
+                    <div class="logo">
+                        <img src="/imgFiles/transparentLogo.png" alt="The Arab Community Logo" class="logo-img">
+                        <p class="logo-text">The Arab Professionals Community</p>
+                    </div>
+                </nav>
+
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <h1 class="main-heading js-scroll fade-in-bottom">A meetup for all.</h1>
+                        <h2 class="sub-heading js-scroll fade-in-bottom">No matter how 'Arab' you are.</h2>
+                    </div>
+                    <div class="hero-right js-scroll fade-in">
+                        <div class="next-meetup-card">
+                            <div class="next-meetup-header">
+                                <p>Our Next Meetup</p>
+                            </div>
+                            <div id="next-meetup-content" class="next-meetup-body">
+                                <!-- This content will be dynamically populated by JavaScript -->
+                                <div class="spinner"></div>
+                                <p class="loading-text">Loading next event...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS SECTION -->
+    <section class="stats-section container">
+        <div class="stat-item js-scroll fade-in-bottom">
+            <div class="stat-icon">
+                <span class="fa fa-heart icon-heart"></span>
+            </div>
+            <div class="stat-text">
+                <p class="stat-title">The Most Attended</p>
+                <p class="stat-description"><span id="member-counter">1305</span> members and counting</p>
+            </div>
+        </div>
+        <div class="stat-item js-scroll fade-in-bottom" style="animation-delay: 100ms;">
+            <div class="stat-icon icon-stars">
+                <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-half-o"></span>
+            </div>
+            <div class="stat-text">
+                <p class="stat-title">The Most Loved</p>
+                <p class="stat-description">4.8 stars (176 reviews)</p>
+            </div>
+        </div>
+        <div class="stat-item js-scroll fade-in-bottom" style="animation-delay: 200ms;">
+            <div class="stat-icon">
+                <span class="fa fa-smile-o icon-smile"></span>
+            </div>
+            <div class="stat-text">
+                <p class="stat-title">The Most Diverse</p>
+                <p class="stat-description">You don't have to act Arab to be Arab</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <section class="gallery-section js-scroll fade-in-bottom">
+        <div class="container">
+            <h2 class="section-title">Moments From Our Meetups</h2>
+            <p class="section-subtitle">Fun, friends, and falafel in action.</p>
+            <div class="gallery-grid">
+                <!-- Replace these with your actual images -->
+                <div class="gallery-item"><img src="https://arabcommunity.org/imgFiles/WhatsApp%20Image%202023-12-31%20at%2014.54.21%20(1).jpeg" alt="A group of people smiling at an Arab community event."></div>
+                <div class="gallery-item"><img src="https://arabcommunity.org/imgFiles/WhatsApp%20Image%202023-12-31%20at%2014.54.21.jpeg" alt="Members of the Arab Professionals Community networking."></div>
+                <div class="gallery-item"><img src="https://arabcommunity.org/imgFiles/originalMeetup.jpeg" alt="A wide shot of a busy meetup event."></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter-section js-scroll fade-in-bottom">
+        <div class="container text-center">
+            <h2 class="section-title">Join the Newsletter</h2>
+            <p class="section-subtitle">Get updates on events, community news, and more.</p>
+            <div id="newsletter-submission" class="newsletter-form">
+                <input id="email-input" type="email" class="email-field" placeholder="Your email goes here" autocomplete="email">
+                <button id="email-signup-button" class="btn btn-primary" style="display: none;">Sign Me Up</button>
+            </div>
+            <div id="newsletter-success" style="display: none;">
+                <p class="success-message">
+                    <span style="color:#083400; font-weight: 700;">Success 🥳!</span> <br> Keep an eye out for our newsletter in your inbox ✉️
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHARITIES SECTION -->
+    <section class="promo-section charities-section js-scroll fade-in-bottom">
+        <div class="promo-overlay">
+            <div class="container promo-content">
+                <div class="promo-text">
+                    <h2>Charitable Causes and Projects</h2>
+                    <p>Our list of domestic and international charitable causes that we raise awareness of.</p>
+                </div>
+                <div class="promo-action">
+                    <a href="/list-of-charity-causes-and-projects.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>©️ The Arab Community of the United Kingdom 2024</p>
+    </footer>
+
+    <!-- COOKIES NOTIFICATION -->
+    <div id="cookies-notification" class="cookies-popup shadow1">
+        <p>We use cookies to improve your experience. You can adjust these controls anytime in your <a href="/you/cookiesSettings" class="cookies-link">settings</a>.</p>
+        <a href="/privacy-policy" class="cookies-link">Learn more.</a>
+        <div id="cookies-accept-all" class="cookies-accept">OK</div>
+    </div>
+
+
+<!-- ================================================================================================= -->
+<!-- ========================================= CSS STYLES ========================================== -->
+<!-- ================================================================================================= -->
+<style>
+    /* ------------------- */
+    /* --- RESET & DEFAULTS --- */
+    /* ------------------- */
+    :root {
+        --font-heading: 'Montserrat', sans-serif;
+        --font-body: 'Nunito Sans', sans-serif;
+        
+        --color-primary: #E6B22D; /* Gold */
+        --color-secondary: #00354F; /* Dark Blue */
+        --color-accent: #ec1c40; /* Meetup Red */
+        --color-text: #333333;
+        --color-text-light: #FFFFFF;
+        --color-background: #FFFFFF;
+        --color-background-alt: #F6F6F6;
+        --color-border: #DDDDDD;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background-color: var(--color-background);
+        line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .text-center { text-align: center; }
+
+    /* ------------------- */
+    /* --- BUTTONS --- */
+    /* ------------------- */
+    .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: none;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .btn-primary {
+        background-color: var(--color-primary);
+        color: var(--color-text);
+    }
+    .btn-primary:hover {
+        background-color: #d4a631;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn-secondary {
+        background-color: var(--color-background);
+        color: var(--color-secondary);
+        border-color: var(--color-secondary);
+    }
+    .btn-secondary:hover {
+        background-color: var(--color-secondary);
+        color: var(--color-background);
+        transform: translateY(-2px);
+    }
+
+    .btn-meetup {
+        background-color: var(--color-accent);
+        color: var(--color-text-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .btn-meetup:hover {
+        border-color: var(--color-primary);
+        transform: translateY(-2px);
+    }
+    .btn-meetup img {
+        height: 20px;
+        width: auto;
+    }
+
+    /* ------------------- */
+    /* --- HERO SECTION --- */
+    /* ------------------- */
+    .hero-section {
+        background: url('/imgFiles/originalMeetupDesaturated.jpg') center center/cover no-repeat;
+        color: var(--color-text-light);
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(154deg, rgba(230, 178, 45, 0.85), rgba(230, 178, 45, 0.4));
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo-img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .logo-text {
+        font-family: var(--font-heading);
+        font-size: 22px;
+        font-weight: 900;
+        color: #000;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+        flex-grow: 1;
+        padding: 30px 0 60px 0;
+    }
+
+    .hero-left {
+        flex: 1.5;
+        min-width: 300px;
+    }
+
+    .main-heading {
+        font-size: 60px;
+        font-weight: 900;
+        color: #000;
+        margin-bottom: 1rem;
+    }
+
+    .sub-heading {
+        font-size: 30px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    .hero-right {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    /* Next Meetup Card */
+    .next-meetup-card {
+        background: var(--color-background);
+        color: var(--color-text);
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        overflow: hidden;
+    }
+
+    .next-meetup-header {
+        background: var(--color-secondary);
+        color: var(--color-text-light);
+        padding: 10px 20px;
+        font-weight: 600;
+    }
+
+    .next-meetup-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .next-meetup-body h3 { font-size: 20px; }
+    .next-meetup-body p { font-size: 14px; color: #666; }
+    .next-meetup-body .btn { align-self: flex-end; }
+
+    /* Loading Spinner */
+    .spinner {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid var(--color-primary);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        align-self: center;
+    }
+    .loading-text { text-align: center; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+
+    /* ------------------- */
+    /* --- STATS SECTION --- */
+    /* ------------------- */
+    .stats-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 40px;
+        padding: 60px 40px;
+    }
+
+    .stat-item {
+        flex: 1;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .stat-icon {
+        font-size: 24px;
+        color: var(--color-primary);
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+    .stat-icon .fa { margin: 0 2px; }
+
+    .stat-title { font-size: 18px; font-weight: 700; }
+    .stat-description { font-size: 14px; }
+
+    /* Subtle Animations */
+    .icon-heart { animation: pulse 2s infinite ease-in-out; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+
+    .icon-stars .fa { animation: glow 2.5s infinite ease-in-out; }
+    @keyframes glow { 0%, 100% { color: var(--color-primary); opacity: 0.7; } 50% { color: #ffd700; opacity: 1; } }
+    .icon-stars .fa:nth-child(2) { animation-delay: 0.1s; }
+    .icon-stars .fa:nth-child(3) { animation-delay: 0.2s; }
+    .icon-stars .fa:nth-child(4) { animation-delay: 0.3s; }
+    .icon-stars .fa:nth-child(5) { animation-delay: 0.4s; }
+
+    .icon-smile { animation: bob 3s infinite ease-in-out; }
+    @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+    /* ------------------- */
+    /* --- GALLERY SECTION --- */
+    /* ------------------- */
+    .gallery-section {
+        background-color: var(--color-background-alt);
+        padding: 60px 0;
+    }
+    .section-title { text-align: center; margin-bottom: 10px; font-size: 32px; }
+    .section-subtitle { text-align: center; margin-bottom: 40px; font-size: 18px; color: #666; }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    .gallery-item {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* ------------------- */
+    /* --- NEWSLETTER & PROMO --- */
+    /* ------------------- */
+    .newsletter-section {
+        padding: 60px 0;
+    }
+    .newsletter-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .email-field {
+        flex-grow: 1;
+        height: 50px;
+        padding: 10px 20px;
+        font-size: 18px;
+        text-align: center;
+        border: 2px solid var(--color-border);
+        border-radius: 50px;
+        min-width: 250px;
+    }
+    .email-field:focus {
+        outline: none;
+        border-color: var(--color-primary);
+    }
+    .success-message { font-size: 18px; }
+
+    .promo-section {
+        background-size: cover;
+        background-position: center;
+        color: var(--color-text-light);
+        padding: 80px 0;
+        margin: 40px 0;
+    }
+    .promo-overlay {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 53, 79, 0.95) 0%, rgba(0, 53, 79, 0.7) 100%);
+    }
+    .charities-section {
+        background-image: url('/imgFiles/hands-hearts-transparent.png');
+    }
+    .promo-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .promo-text { flex: 2; min-width: 300px; }
+    .promo-text h2 { font-size: 32px; margin-bottom: 10px; }
+    .promo-action { flex: 1; text-align: center; }
+    .promo-action .btn-secondary { background-color: transparent; color: var(--color-text-light); border-color: var(--color-text-light); }
+    .promo-action .btn-secondary:hover { background-color: var(--color-text-light); color: var(--color-secondary); }
+
+    /* ------------------- */
+    /* --- FOOTER & COOKIES --- */
+    /* ------------------- */
+    .footer {
+        background: var(--color-background-alt);
+        padding: 20px 40px;
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .cookies-popup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        background-color: var(--color-background);
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 360px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+    .cookies-popup.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .cookies-popup p { font-size: 15px; line-height: 1.5; }
+    .cookies-link { color: var(--color-secondary); text-decoration: none; font-weight: 600; }
+    .cookies-link:hover { text-decoration: underline; }
+    .cookies-accept {
+        background: none; border: none;
+        color: var(--color-secondary);
+        font-weight: 700;
+        cursor: pointer;
+        align-self: flex-end;
+        padding: 5px;
+    }
+    .cookies-accept:hover { color: var(--color-primary); }
+
+    /* ------------------- */
+    /* --- ANIMATIONS & RESPONSIVE --- */
+    /* ------------------- */
+    .js-scroll {
+        opacity: 0;
+        transition: opacity 500ms;
+    }
+    .js-scroll.scrolled {
+        opacity: 1;
+    }
+    .scrolled.fade-in {
+        animation: fade-in 1s ease-in-out both;
+    }
+    .scrolled.fade-in-bottom {
+        animation: fade-in-bottom 0.8s ease-in-out both;
+    }
+    @keyframes fade-in-bottom {
+        from { transform: translateY(50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @media screen and (max-width: 768px) {
+        .container { padding: 0 20px; }
+        .main-heading { font-size: 45px; }
+        .sub-heading { font-size: 24px; }
+        .hero-content { text-align: center; flex-direction: column; }
+        .hero-left, .hero-right { width: 100%; }
+        .logo-text { font-size: 18px; }
+        .promo-content { text-align: center; }
+    }
+</style>
+
+
+<!-- ================================================================================================= -->
+<!-- ======================================= JAVASCRIPT ============================================ -->
+<!-- ================================================================================================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    /**
+     * FEATURE: DYNAMICALLY LOAD NEXT MEETUP
+     * 
+     * This function fetches data for the next event and populates the card.
+     * IMPORTANT: Direct browser requests to meetup.com are blocked by CORS policy.
+     * You MUST set up a simple server-side proxy.
+     * 
+     * Your frontend (this script) will fetch from: /api/next-meetup
+     * Your backend proxy at that endpoint will fetch from the real Meetup API:
+     * https://api.meetup.com/arab-professionals-london/events?page=1&status=upcoming
+     * 
+     * This is more secure, reliable, and the professional way to handle API keys.
+     */
+    const fetchNextMeetup = async () => {
+        const meetupContent = document.getElementById("next-meetup-content");
+        try {
+            // This is the endpoint for your serverless function/proxy
+            const response = await fetch('/api/next-meetup');
+            if (!response.ok) throw new Error('Network response was not ok.');
+            
+            const events = await response.json();
+            
+            if (events && events.length > 0) {
+                const nextEvent = events[0];
+                const eventDate = new Date(nextEvent.time);
+                const formattedDate = eventDate.toLocaleString('en-GB', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: true
+                }).replace(' at', '');
+
+                meetupContent.innerHTML = `
+                    <h3>${nextEvent.name}</h3>
+                    <p>${formattedDate}</p>
+                    <a href="${nextEvent.link}" class="btn btn-meetup" target="_blank" rel="noopener noreferrer">
+                        RSVP on <img src="/imgFiles/meetupLogoWhite.png" alt="Meetup Logo">
+                    </a>
+                `;
+            } else {
+                throw new Error('No upcoming events found.');
+            }
+        } catch (error) {
+            console.error('Error fetching Meetup data:', error);
+            meetupContent.innerHTML = `
+                <h3>Our Next Event</h3>
+                <p>Details for our next gathering are coming soon. Check our Meetup page for the latest updates!</p>
+                <a href="https://www.meetup.com/arab-professionals-london/" class="btn btn-meetup" target="_blank" rel="noopener noreferrer">
+                    Visit <img src="/imgFiles/meetupLogoWhite.png" alt="Meetup Logo">
+                </a>
+            `;
+        }
+    };
+
+    /**
+     * FEATURE: ANIMATED MEMBER COUNTER
+     */
+    const animateCounter = () => {
+        const counter = document.getElementById("member-counter");
+        if (!counter) return;
+
+        const target = parseInt(counter.textContent.replace(/,/g, ''), 10);
+        const duration = 1500;
+        const increment = target / (duration / 16);
+        let current = 0;
+
+        const formatNumber = (num) => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                counter.textContent = formatNumber(Math.ceil(current));
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = formatNumber(target);
+            }
+        };
+        updateCounter();
+    };
+
+    /**
+     * FEATURE: NEWSLETTER SIGNUP FORM
+     */
+    const handleNewsletter = () => {
+        const emailInput = document.getElementById('email-input');
+        const signupButton = document.getElementById('email-signup-button');
+        const submissionDiv = document.getElementById('newsletter-submission');
+        const successDiv = document.getElementById('newsletter-success');
+
+        if (!emailInput || !signupButton || !submissionDiv || !successDiv) return;
+
+        emailInput.addEventListener('keyup', () => {
+            if (emailInput.value.length > 0 && /\S+@\S+\.\S+/.test(emailInput.value)) {
+                signupButton.style.display = "inline-block";
+            } else {
+                signupButton.style.display = "none";
+            }
+        });
+
+        signupButton.addEventListener('click', async () => {
+            const email = emailInput.value;
+            // NOTE: Replace '/api/subscribe' with your actual newsletter API endpoint (e.g., a Firebase function URL).
+            try {
+                /*
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email })
+                });
+                if (!response.ok) throw new Error('Subscription failed');
+                */
+                
+                // For demonstration, we'll just show success immediately.
+                // In a real app, you'd show success only after the fetch above is successful.
+                console.log(`Subscribing ${email}...`);
+                submissionDiv.style.display = "none";
+                successDiv.style.display = "block";
+
+            } catch (error) {
+                console.error('Newsletter subscription error:', error);
+                alert('Sorry, there was an issue signing you up. Please try again later.');
+            }
+        });
+    };
+
+    /**
+     * FEATURE: FADE-IN ELEMENTS ON SCROLL
+     */
+    const handleScrollAnimation = () => {
+        const scrollElements = document.querySelectorAll(".js-scroll");
+        if (scrollElements.length === 0) return;
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+        };
+
+        const displayScrollElement = (element) => element.classList.add("scrolled");
+
+        const runAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.1)) {
+                    displayScrollElement(el);
+                }
+            });
+        };
+
+        window.addEventListener("scroll", runAnimation);
+        runAnimation(); // Run once on load
+    };
+
+    /**
+     * FEATURE: COOKIE BANNER
+     */
+    const handleCookieBanner = () => {
+        const notification = document.getElementById('cookies-notification');
+        const acceptButton = document.getElementById('cookies-accept-all');
+        if (!notification || !acceptButton) return;
+
+        // Show banner if cookie not set
+        if (!localStorage.getItem('cookiesAccepted')) {
+            setTimeout(() => {
+                notification.classList.add('visible');
+            }, 1000);
+        }
+
+        acceptButton.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            notification.classList.remove('visible');
+        });
+    };
+
+
+    // --- INITIALIZE ALL FEATURES ---
+    fetchNextMeetup();
+    animateCounter();
+    handleNewsletter();
+    handleScrollAnimation();
+    handleCookieBanner();
+});
+</script>
+
+</body>
+</html>
